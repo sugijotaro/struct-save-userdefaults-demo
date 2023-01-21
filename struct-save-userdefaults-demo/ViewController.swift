@@ -22,9 +22,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func saveButtonTapped() {
-        if let title = titleTextField.text, let description = descriptionTextField.text, let thumbnail = thumbnailImageView.image {
-            let movie = Movie(title: title, description: description, thumbnail: thumbnail.jpegData(compressionQuality: 1)!)
+        if let title = titleTextField.text, !title.isEmpty, let description = descriptionTextField.text, !description.isEmpty, let thumbnail = thumbnailImageView.image?.jpegData(compressionQuality: 1)  {
+            print(thumbnail)
+            let movie = Movie(title: title, description: description, thumbnail: thumbnail)
+            print(movie)
             addMovies(movie: movie, forKey: "movies")
+            resetInputs()
             showAlert(message: "保存完了")
         } else {
             showAlert(message: "すべての項目を埋めてください")
@@ -53,11 +56,16 @@ class ViewController: UIViewController {
         thumbnailImageView.image = UIImage(systemName: "photo.circle",withConfiguration: UIImage.SymbolConfiguration(font: .systemFont(ofSize: 48)))
     }
     
-    func addMovies(movie: Movie,forKey: String) {
-        var movies = loadMoies(forKey: forKey)
-        movies?.append(movie)
-        saveMovies(movies: movies!, forKey: forKey)
+    func addMovies(movie: Movie, forKey: String) {
+        if var movies = loadMovies(forKey: forKey) {
+            movies.append(movie)
+            saveMovies(movies: movies, forKey: forKey)
+        } else {
+            let movies = [movie]
+            saveMovies(movies: movies, forKey: forKey)
+        }
     }
+
     
 }
 

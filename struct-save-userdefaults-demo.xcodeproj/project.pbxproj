@@ -14,6 +14,7 @@
 		0A25211B297C2FCD0090407C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A25211A297C2FCD0090407C /* Assets.xcassets */; };
 		0A25211E297C2FCD0090407C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A25211C297C2FCD0090407C /* LaunchScreen.storyboard */; };
 		0A252126297C30B00090407C /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A252125297C30B00090407C /* Movie.swift */; };
+		0A252128297C3CEF0090407C /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A252127297C3CEF0090407C /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		0A25211D297C2FCD0090407C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0A25211F297C2FCD0090407C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A252125297C30B00090407C /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		0A252127297C3CEF0090407C /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				0A252111297C2FCC0090407C /* AppDelegate.swift */,
 				0A252113297C2FCC0090407C /* SceneDelegate.swift */,
 				0A252115297C2FCC0090407C /* ViewController.swift */,
+				0A252127297C3CEF0090407C /* TableViewController.swift */,
 				0A252117297C2FCC0090407C /* Main.storyboard */,
 				0A252125297C30B00090407C /* Movie.swift */,
 				0A25211A297C2FCD0090407C /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 				0A252116297C2FCC0090407C /* ViewController.swift in Sources */,
 				0A252112297C2FCC0090407C /* AppDelegate.swift in Sources */,
 				0A252126297C30B00090407C /* Movie.swift in Sources */,
+				0A252128297C3CEF0090407C /* TableViewController.swift in Sources */,
 				0A252114297C2FCC0090407C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

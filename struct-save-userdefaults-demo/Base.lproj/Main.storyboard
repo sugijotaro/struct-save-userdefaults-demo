@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Add Contents-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="struct_save_userdefaults_demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -58,7 +58,7 @@
                             <constraint firstItem="qUi-8m-Y0a" firstAttribute="top" secondItem="mwi-yn-f53" secondAttribute="bottom" constant="10" id="ySQ-Us-stn"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="mP0-rT-jaD"/>
+                    <tabBarItem key="tabBarItem" title="Add Contents" image="star.fill" catalog="system" id="mP0-rT-jaD"/>
                     <connections>
                         <outlet property="descriptionTextField" destination="mwi-yn-f53" id="98S-rl-yuc"/>
                         <outlet property="thumbnailImageView" destination="qUi-8m-Y0a" id="SA4-dE-JgP"/>
@@ -69,21 +69,37 @@
             </objects>
             <point key="canvasLocation" x="972" y="-2"/>
         </scene>
-        <!--Item-->
+        <!--Contents List-->
         <scene sceneID="lm6-jh-wwo">
             <objects>
-                <tableViewController id="pCc-Fp-nGv" sceneMemberID="viewController">
+                <tableViewController id="pCc-Fp-nGv" customClass="TableViewController" customModule="struct_save_userdefaults_demo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="U6d-zd-aei">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="U4B-rz-Jcr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="Lsh-Bq-nLh" detailTextLabel="Utk-s1-8GO" style="IBUITableViewCellStyleSubtitle" id="U4B-rz-Jcr">
                                 <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U4B-rz-Jcr" id="iPi-R6-b8y">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lsh-Bq-nLh">
+                                            <rect key="frame" x="20" y="6.0000000000000009" width="25" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Utk-s1-8GO">
+                                            <rect key="frame" x="19.999999999999996" y="22.333333333333336" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -92,7 +108,7 @@
                             <outlet property="delegate" destination="pCc-Fp-nGv" id="ZrZ-Va-Az7"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="aG5-D2-wTF"/>
+                    <tabBarItem key="tabBarItem" title="Contents List" image="list.clipboard.fill" catalog="system" id="aG5-D2-wTF"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0J-ww-fdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -118,6 +134,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="list.clipboard.fill" catalog="system" width="103" height="128"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
