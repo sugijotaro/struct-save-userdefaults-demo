@@ -17,12 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WLt-VM-Jr8">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WLt-VM-Jr8">
                                 <rect key="frame" x="16" y="67" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="discription" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwi-yn-f53">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="説明文" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwi-yn-f53">
                                 <rect key="frame" x="16" y="109" width="361" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -69,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="972" y="-2"/>
         </scene>
-        <!--Contents List-->
+        <!--Table View Controller-->
         <scene sceneID="lm6-jh-wwo">
             <objects>
                 <tableViewController id="pCc-Fp-nGv" customClass="TableViewController" customModule="struct_save_userdefaults_demo" customModuleProvider="target" sceneMemberID="viewController">
@@ -108,11 +108,17 @@
                             <outlet property="delegate" destination="pCc-Fp-nGv" id="ZrZ-Va-Az7"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Contents List" image="list.clipboard.fill" catalog="system" id="aG5-D2-wTF"/>
+                    <navigationItem key="navigationItem" id="5on-26-FSx">
+                        <barButtonItem key="leftBarButtonItem" image="trash" catalog="system" id="EUY-L5-f63">
+                            <connections>
+                                <action selector="trashButtonTapped" destination="pCc-Fp-nGv" id="aNn-3I-GIC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X0J-ww-fdK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1663" y="-2"/>
+            <point key="canvasLocation" x="2335" y="-2"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tuZ-Ee-Gcs">
@@ -125,17 +131,37 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="bUr-dm-Ism"/>
-                        <segue destination="pCc-Fp-nGv" kind="relationship" relationship="viewControllers" id="PiG-uC-LZj"/>
+                        <segue destination="ooz-Wc-7Cg" kind="relationship" relationship="viewControllers" id="PiG-uC-LZj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kWl-W7-NqP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
+        <!--Contents List-->
+        <scene sceneID="ZOC-Ku-3df">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ooz-Wc-7Cg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Contents List" image="list.clipboard.fill" catalog="system" id="aG5-D2-wTF"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hS8-Qb-1zn">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pCc-Fp-nGv" kind="relationship" relationship="rootViewController" id="n1O-aK-WCn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U6K-sc-Muh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1661.8320610687022" y="-2.1126760563380285"/>
+        </scene>
     </scenes>
     <resources>
         <image name="list.clipboard.fill" catalog="system" width="103" height="128"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

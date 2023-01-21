@@ -22,6 +22,17 @@ class TableViewController: UITableViewController {
         loadData()
     }
     
+    @IBAction func trashButtonTapped() {
+        let alert: UIAlertController = UIAlertController(title: "項目を削除", message:"項目をすべて削除します。この操作は取り消せません。", preferredStyle:  UIAlertController.Style.alert)
+        let defaultAction: UIAlertAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler:{
+              (action: UIAlertAction!) -> Void in
+            saveMovies(movies: [], forKey: "movies")
+            self.loadData()
+        })
+        alert.addAction(defaultAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     func loadData() {
         if let loadedMovies = loadMovies(forKey: "movies") {
             movies = loadedMovies
