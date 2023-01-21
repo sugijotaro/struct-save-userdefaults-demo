@@ -9,11 +9,11 @@ import Foundation
 
 struct Movie: Codable {
     var title: String
-    var discription: String
+    var description: String
     var thumbnail: Data
 }
 
-func saveBookmarks(movies: [Movie], forKey: String) {
+func saveMovies(movies: [Movie], forKey: String) {
     let jsonEncoder = JSONEncoder()
     guard let data = try? jsonEncoder.encode(movies) else {
         return
@@ -21,7 +21,7 @@ func saveBookmarks(movies: [Movie], forKey: String) {
     UserDefaults.standard.set(data, forKey: forKey)
 }
 
-func loadBookmarks(forKey: String) -> [Movie]? {
+func loadMoies(forKey: String) -> [Movie]? {
     let jsonDecoder = JSONDecoder()
     guard let data = UserDefaults.standard.data(forKey: forKey),
           let movies = try? jsonDecoder.decode([Movie].self, from: data) else {
