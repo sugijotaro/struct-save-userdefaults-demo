@@ -16,10 +16,42 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WLt-VM-Jr8">
+                                <rect key="frame" x="16" y="67" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="discription" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwi-yn-f53">
+                                <rect key="frame" x="16" y="109" width="361" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qUi-8m-Y0a">
+                                <rect key="frame" x="16" y="153" width="361" height="192.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qUi-8m-Y0a" secondAttribute="height" multiplier="15:8" id="V48-7M-aO9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WLt-VM-Jr8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6kD-Jt-AVO"/>
+                            <constraint firstItem="mwi-yn-f53" firstAttribute="top" secondItem="WLt-VM-Jr8" secondAttribute="bottom" constant="8" symbolic="YES" id="BSK-hj-7uC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qUi-8m-Y0a" secondAttribute="trailing" constant="16" id="JW7-Np-VOf"/>
+                            <constraint firstItem="WLt-VM-Jr8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Lm2-gZ-58r"/>
+                            <constraint firstItem="qUi-8m-Y0a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Oqq-eb-Aed"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WLt-VM-Jr8" secondAttribute="trailing" constant="16" id="TWt-Xf-wJW"/>
+                            <constraint firstItem="mwi-yn-f53" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kam-Fd-lG3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mwi-yn-f53" secondAttribute="trailing" constant="16" id="qk4-ET-Umv"/>
+                            <constraint firstItem="qUi-8m-Y0a" firstAttribute="top" secondItem="mwi-yn-f53" secondAttribute="bottom" constant="10" id="ySQ-Us-stn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="mP0-rT-jaD"/>
+                    <connections>
+                        <outlet property="thumbnailImageView" destination="qUi-8m-Y0a" id="SA4-dE-JgP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
