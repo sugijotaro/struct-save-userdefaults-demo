@@ -23,9 +23,7 @@ class ViewController: UIViewController {
     
     @IBAction func saveButtonTapped() {
         if let title = titleTextField.text, !title.isEmpty, let description = descriptionTextField.text, !description.isEmpty, let thumbnail = thumbnailImageView.image?.jpegData(compressionQuality: 1)  {
-            print(thumbnail)
             let movie = Movie(title: title, description: description, thumbnail: thumbnail)
-            print(movie)
             addMovies(movie: movie, forKey: "movies")
             resetInputs()
             showAlert(message: "保存完了")
