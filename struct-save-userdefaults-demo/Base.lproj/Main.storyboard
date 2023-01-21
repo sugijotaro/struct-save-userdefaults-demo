@@ -33,6 +33,14 @@
                                     <constraint firstAttribute="width" secondItem="qUi-8m-Y0a" secondAttribute="height" multiplier="15:8" id="V48-7M-aO9"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="deB-sR-n6o">
+                                <rect key="frame" x="167.33333333333334" y="355.66666666666669" width="58.666666666666657" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="保存"/>
+                                <connections>
+                                    <action selector="saveButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="1z7-X7-poI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -40,7 +48,9 @@
                             <constraint firstItem="WLt-VM-Jr8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6kD-Jt-AVO"/>
                             <constraint firstItem="mwi-yn-f53" firstAttribute="top" secondItem="WLt-VM-Jr8" secondAttribute="bottom" constant="8" symbolic="YES" id="BSK-hj-7uC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qUi-8m-Y0a" secondAttribute="trailing" constant="16" id="JW7-Np-VOf"/>
+                            <constraint firstItem="deB-sR-n6o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jaw-zu-W23"/>
                             <constraint firstItem="WLt-VM-Jr8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="Lm2-gZ-58r"/>
+                            <constraint firstItem="deB-sR-n6o" firstAttribute="top" secondItem="qUi-8m-Y0a" secondAttribute="bottom" constant="10" id="MiM-2C-GMj"/>
                             <constraint firstItem="qUi-8m-Y0a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Oqq-eb-Aed"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WLt-VM-Jr8" secondAttribute="trailing" constant="16" id="TWt-Xf-wJW"/>
                             <constraint firstItem="mwi-yn-f53" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kam-Fd-lG3"/>
@@ -50,7 +60,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="mP0-rT-jaD"/>
                     <connections>
+                        <outlet property="descriptionTextField" destination="mwi-yn-f53" id="98S-rl-yuc"/>
                         <outlet property="thumbnailImageView" destination="qUi-8m-Y0a" id="SA4-dE-JgP"/>
+                        <outlet property="titleTextField" destination="WLt-VM-Jr8" id="ApD-XU-KcN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
