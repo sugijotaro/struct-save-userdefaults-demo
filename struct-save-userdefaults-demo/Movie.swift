@@ -21,7 +21,7 @@ func saveMovies(movies: [Movie], forKey: String) {
     UserDefaults.standard.set(data, forKey: forKey)
 }
 
-func loadMoies(forKey: String) -> [Movie]? {
+func loadMovies(forKey: String) -> [Movie]? {
     let jsonDecoder = JSONDecoder()
     guard let data = UserDefaults.standard.data(forKey: forKey),
           let movies = try? jsonDecoder.decode([Movie].self, from: data) else {
